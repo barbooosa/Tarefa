@@ -7,6 +7,14 @@ import java.util.TreeSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 public class Banco {
+
+	private List<Conta> contas = new ArrayList<>();
+
+    public void adicionarConta(Conta conta) { contas.add(conta); }
+    public void removerConta(String numero) {
+        contas.removeIf(conta -> conta.getNumero().equals(numero));
+    }
+    public List<Conta> getContas() { return contas; }
 	
 	private ArrayList<Conta> contas;
 	//private List<Conta> contas;
